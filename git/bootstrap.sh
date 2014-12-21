@@ -8,7 +8,7 @@ git_clone() {
 }
 
 install_git () {
-    install "git"
+    install "git" "git"
     GIT_PATH=$(which git);
     info "git path: $GIT_PATH\n"
 }

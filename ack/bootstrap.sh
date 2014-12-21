@@ -1,6 +1,6 @@
 install_ack() {
     if [ $platform == 'linux' ]; then
-        install "ack-grep"
+        install "ack-grep" "ack-grep"
     else
         fail "platform not supported"
     fi

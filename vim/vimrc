@@ -19,6 +19,7 @@ inoremap jk <esc>
 " Incremental search
 set incsearch
 
+" Highlight trailing characters
 match ErrorMsg '\s\+$'
 
 let g:ack_default_options = " -H --nocolor --nogroup --column"
