@@ -28,6 +28,11 @@ install_with_curl() {
      fi
 }
 
+if [ ! -d $BOOTSTRAP_DIR ]; then
+    warning "removing old .bootstrap.sh dir\n"
+    rm -rf $BOOTSTRAP_DIR 
+fi
+
 if hash git 2>/dev/null; then
     info "cloning bootstrap into $BOOTSTRAP_DIR\n";
     git clone $GIT_REPO $BOOTSTRAP_DIR
