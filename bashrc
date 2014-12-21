@@ -8,4 +8,4 @@ sudo_wisdom=(
 )
 
 #For the lulz.
-alias sudo="echo ${sudoWisdom[$RANDOM % 6]} ; sudo"
+alias sudo="echo ${sudo_wisdom[$RANDOM % 6]} ; sudo"
