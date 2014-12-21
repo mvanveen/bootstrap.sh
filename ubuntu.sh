@@ -27,3 +27,8 @@ install() {
     fi
     success "git installed successfully"
 }
+
+link_files () {
+  ln -s $1 $2
+  success "linked $1 to $2"
+}
