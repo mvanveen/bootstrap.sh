@@ -1,4 +1,4 @@
-GIT_CONFIG_PATH="$DOTFILE_INSTALL_PATH/bashrc.symlink";
+GIT_CONFIG_PATH="$DOTFILE_INSTALL_PATH/gitconfig.symlink";
 
 git_clone() {
     git clone $1 $2 &>> $LOGDIR/git.log;
