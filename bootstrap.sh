@@ -41,3 +41,7 @@ success "ack configuration successful"
 info "checking alias configuration\n"
 source aliases/bootstrap.sh
 success "alias configuration successful"
+
+info "checking ssh configuation\n"
+source ssh/bootstrap.sh
+success "ssh configuration successful"
