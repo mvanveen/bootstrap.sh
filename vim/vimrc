@@ -1,0 +1,2 @@
+" install pathogen
+call pathogen#infect()
