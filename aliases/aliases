@@ -6,3 +6,4 @@ alias sudo="echo 'With great power comes great responsibility.'; sudo"
 alias gl='git lg1'
 alias gb='git branch'
 alias gs='git status --short'
+alias gd='git diff'
