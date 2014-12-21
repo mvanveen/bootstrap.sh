@@ -38,7 +38,7 @@ esac
 
 #virtualenv
 export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 
 export EDITOR=$(which vim);
 alias no-pyc-files="find . -name '*.pyc' | xargs rm -f"
