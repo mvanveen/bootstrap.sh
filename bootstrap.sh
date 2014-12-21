@@ -68,3 +68,5 @@ success "dotfiles configuration successful"
 
 # copy aliases only at the end
 cat $ALIAS_INSTALL_PATH >> $BASHRC_PATH
+
+source ~/.bashrc
