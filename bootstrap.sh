@@ -62,6 +62,10 @@ info "checking python configuration\n"
 source python/bootstrap.sh
 success "python configuration successful"
 
+info "checking fortune configuration\n"
+source fortune/bootstrap.sh
+success "fortune configuration successful"
+
 info "copying solarized configuration\n"
 copy_file "solarized.sh" $DOTFILE_INSTALL_PATH/solarize.symlink
 success "solarized configuration successful"
