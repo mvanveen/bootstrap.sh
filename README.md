@@ -18,6 +18,16 @@ $ cd; bootstrap.sh ./bootstrap.sh
 **`TODO`**: document this
 
 
+### Philosophies
+
+- totally idempotent operation
+- log everything
+- `bash` scripting only (maybe python utils later)
+- try to recover if you can but
+- fail hard when things go awry
+- prompt user minimally
+- assume as little as possible about user's box
+
 ### What's In The Box
 
 - `ack-grep`
@@ -27,7 +37,11 @@ $ cd; bootstrap.sh ./bootstrap.sh
   - NERDTree
   - python-mode
   - vim-startify
+- `ssh` key generation
+  - `TODO`: github authentication
+  - `TODO`: scripting to add pubkey to existing servers
 - solarized color scheme for chrome os & vim
-- fortune file management
+- mvv's preferred aliases
+- `fortune`s in your prompt
 - git configuration
    - :warning: ( be sure to manually change config deets to your own!)
