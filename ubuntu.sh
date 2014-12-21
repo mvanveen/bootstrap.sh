@@ -26,7 +26,7 @@ install() {
             fail "\tinstallation platform not supported, expecting linux\n"
         fi
     fi
-    success "git installed successfully"
+    success "$1 (apt:$2) installed successfully"
 }
 
 link_files () {
