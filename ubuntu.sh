@@ -14,13 +14,14 @@ apt_get_install() {
 }
 
 install() {
+    apt_package=$2 || $1;
     if hash $1 2>/dev/null; then
         info "$1 is already installed\n";
     else
         if [[ $platform == 'linux' ]]; then
  	    # TODO(mvv): I sometimes use non-debian os's.
             info "\tinstalling $1\n"
-            apt_get_install "$1"
+            apt_get_install "$apt_package"
         else
             fail "\tinstallation platform not supported, expecting linux\n"
         fi

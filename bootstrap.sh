@@ -17,6 +17,7 @@ keyboard_interrupt () {
 trap keyboard_interrupt SIGINT;
 
 DOTFILE_INSTALL_PATH="$cwd/.install";
+BASHRC_PATH="$DOTFILE_INSTALL_PATH/bashrc.symlink";
 
 ## check to make sure the .install path exists
 info "checking dotfile install path\n"
@@ -25,6 +26,12 @@ make_dir $DOTFILE_INSTALL_PATH
 info "setting up plaftorm...\n"
 source platform.sh
 success "platform configuration successful"
+
+info "copying bashrc over to $BASHRC_PATH\n"
+cp $cwd/bashrc $BASHRC_PATH
+if [ $? != 0 ]; then
+    fail "cping bashrc failed. \n"
+fi
 
 info "checking git configuration\n"
 source git/bootstrap.sh
@@ -49,3 +56,5 @@ success "ssh configuration successful"
 info "adding symlinks to dotfiles\n"
 source dotfiles.sh
 success "dotfiles configuration successful"
+
+source python/bootstrap.sh
