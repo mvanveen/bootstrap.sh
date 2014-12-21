@@ -1,2 +1,4 @@
 " install pathogen
 call pathogen#infect()
+
+colorscheme base16-default
