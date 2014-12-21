@@ -65,9 +65,13 @@ setup_vim_pathogen() {
 }
 
 setup_vim_pathogen_packages() {
+     VIM_ACK_REPO="https://github.com/mileszs/ack.vim.git"
      VIM_CTRLP_REPO="https://github.com/kien/ctrlp.vim.git";
+     VIM_NERDTREE_REPO="https://github.com/scrooloose/nerdtree.git"
 
+     install_vim_pathogen_package "vimack" $VIM_ACK_REPO;
      install_vim_pathogen_package "ctrlp" $VIM_CTRLP_REPO;
+     install_vim_pathogen_package "NERDTree" $VIM_NERDTREE_REPO;
 }
 
 install_vim;
