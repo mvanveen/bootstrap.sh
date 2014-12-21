@@ -43,5 +43,5 @@ if [ ! -f $BOOTSTRAP_SCRIPT ]; then
 fi
 
 cd $BOOTSTRAP_DIR;
-source $BOOTSTRAP_SCRIPT;
+source bootstrap.sh;
 #git remote add origin $GIT_REPO
