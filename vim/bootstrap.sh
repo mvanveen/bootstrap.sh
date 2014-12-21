@@ -1,5 +1,6 @@
 install_vim () {
-    install "vim";
+    install "vim-runtime";
+    install "vim" "vim";
     VIM_PATH=$(which vim);
     info "vim path: $VIM_PATH\n"
 }
@@ -37,7 +38,6 @@ setup_vim_dotfiles_dirs() {
 setup_vim_pathogen() {
     VIM_PATHOGEN_PATH="$VIM_AUTOLOAD_PATH/pathogen.vim"; 
     VIM_PATHOGEN_URL="https://tpo.pe/pathogen.vim"
-    
 
    if [ ! -d "$VIM_AUTOLOAD_PATH" ]; then
        fail "$VIM_AUTOLOAD_PATH not found\n"

@@ -20,3 +20,5 @@ inoremap jk <esc>
 set incsearch
 
 match ErrorMsg '\s\+$'
+
+let g:ack_default_options = " -s -H --nocolor --nogroup --column"
