@@ -45,3 +45,7 @@ success "alias configuration successful"
 info "checking ssh configuation\n"
 source ssh/bootstrap.sh
 success "ssh configuration successful"
+
+info "adding symlinks to dotfiles\n"
+source dotfiles.sh
+success "dotfiles configuration successful"

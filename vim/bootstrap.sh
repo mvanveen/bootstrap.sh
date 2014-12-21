@@ -20,16 +20,17 @@ install_vim_pathogen_package() {
 }
 
 setup_vim_dotfiles_dirs() {
-     VIM_DOTFILE_PATH="$DOTFILE_INSTALL_PATH/.vim.symlink";
+     VIM_DOTFILE_PATH="$DOTFILE_INSTALL_PATH/vim.symlink";
      VIM_BUNDLE_PATH="$VIM_DOTFILE_PATH/bundle";
      VIM_AUTOLOAD_PATH="$VIM_DOTFILE_PATH/autoload";
-     VIM_VIMRC_PATH="$DOTFILE_INSTALL_PATH/.vimrc.symlink"
+     VIM_VIMRC_PATH="$DOTFILE_INSTALL_PATH/vimrc.symlink"
 
      make_dir $VIM_DOTFILE_PATH;
      make_dir $VIM_BUNDLE_PATH;
      make_dir $VIM_AUTOLOAD_PATH;
 
-     cp vim/.vimrc $VIM_VIMRC_PATH; 
+     ln -s -f vim/vimrc $VIM_VIMRC_PATH; 
+
      if [ $? != 0 ]; then
          fail "cp did not succeed\n"
      fi
