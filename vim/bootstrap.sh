@@ -1,7 +1,7 @@
 install_vim () {
-    install "vim-runtime";
+    install "vim" "vim-runtime";
     install "vim" "vim";
-    VIM_PATH=$(which vim);
+    VIM_PATH=`which vim`;
     info "vim path: $VIM_PATH\n"
 }
 
