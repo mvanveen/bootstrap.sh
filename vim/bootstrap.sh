@@ -29,7 +29,7 @@ setup_vim_dotfiles_dirs() {
      make_dir $VIM_BUNDLE_PATH;
      make_dir $VIM_AUTOLOAD_PATH;
 
-     ln -s -f vim/vimrc $VIM_VIMRC_PATH; 
+     cp vim/vimrc $VIM_VIMRC_PATH; 
 
      if [ $? != 0 ]; then
          fail "cp did not succeed\n"
