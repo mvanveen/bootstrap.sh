@@ -16,3 +16,6 @@ inoremap jk <esc>
 
 " Incremental search
 set incsearch
+
+" Show me those sneaky tabs and trailing spaces
+set list listchars=tab:Â»Â·,trail:Â·
