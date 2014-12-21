@@ -47,6 +47,6 @@ if [ ! -f $BOOTSTRAP_SCRIPT ]; then
     fail "could not find bootstrap.sh"
 fi
 
-cd $BOOTSTRAP_DIR;
+echo $BOOTSTRAP_SCRIPT
 source $BOOTSTRAP_SCRIPT;
 #git remote add origin $GIT_REPO
