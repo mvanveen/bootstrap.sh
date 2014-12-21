@@ -21,7 +21,7 @@ install_with_curl() {
      if hash curl 2>/dev/null; then
          info "attempting to curl"
          curl $BOOTSTRAP_ZIP > "$BOOTSTRAP_DIR.Z"
-         uncompress "$BOOTSTRAP_DIR.Z"
+         uncompress -r -f "$BOOTSTRAP_DIR.Z"
 
      else
          fail "curl not installed. out of options \n"
