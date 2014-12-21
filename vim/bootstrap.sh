@@ -32,11 +32,11 @@ setup_vim_dotfiles_dirs() {
      make_dir $VIM_BUNDLE_PATH;
      make_dir $VIM_TMP_PATH;
 
-     copy_file vim/vimrc $VIM_VIMRC_PATH; 
+     copy_file vim/vimrc $VIM_VIMRC_PATH;
 }
 
 setup_vim_pathogen() {
-    VIM_PATHOGEN_PATH="$VIM_AUTOLOAD_PATH/pathogen.vim"; 
+    VIM_PATHOGEN_PATH="$VIM_AUTOLOAD_PATH/pathogen.vim";
     VIM_PATHOGEN_URL="https://tpo.pe/pathogen.vim"
 
    if [ ! -d "$VIM_AUTOLOAD_PATH" ]; then
@@ -67,12 +67,14 @@ setup_vim_pathogen_packages() {
      VIM_NERDTREE_REPO="https://github.com/scrooloose/nerdtree.git"
      VIM_PYTHON_MODE_REPO="https://github.com/klen/python-mode.git"
      VIM_SOLARIZED_REPO="https://github.com/altercation/vim-colors-solarized.git"
+     VIM_STARTIFY_REPO="https://github.com/mhinz/vim-startify"
 
      install_vim_pathogen_package "vimack" $VIM_ACK_REPO;
      install_vim_pathogen_package "ctrlp" $VIM_CTRLP_REPO;
      install_vim_pathogen_package "NERDTree" $VIM_NERDTREE_REPO;
      install_vim_pathogen_package "python-mode" $VIM_PYTHON_MODE_REPO;
      install_vim_pathogen_package "solarized" $VIM_SOLARIZED_REPO;
+     install_vim_pathogen_package "vim-startify" $VIM_STARTIFY_REPO;
 }
 
 install_vim;
