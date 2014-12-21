@@ -1,15 +1,14 @@
-install_git () {
-    if hash git 2>/dev/null; then
-        info "git is already installed\n";
-        GITPATH=$(which git);
-    else
-        if [[ $platform == 'linux' ]]; then
- 	    # TODO(mvv): I sometimes use non-debian os's.
-            info "\tinstalling git\n"
-            apt_get_install "git"
-        fi
+git_clone() {
+    git clone $1 $2 &>> $LOGDIR/git.log;
+    if [ $? != 0 ]; then
+       fail "git clone did not succeed\n"
     fi
-    success "git installed successfully"
+}
+
+install_git () {
+    install "git"
+    GIT_PATH=$(which git);
+    info "git path: $GIT_PATH\n"
 }
 
 configure_git_name() {
@@ -19,7 +18,7 @@ configure_git_name() {
       git config --global user.email "michael@mvanveen.net"
       git config --global user.name "Michael Van Veen"
   else
-      fail "git is not installed!"
+      fail "git is not installed!\n"
   fi
 }
 

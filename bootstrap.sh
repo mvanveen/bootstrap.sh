@@ -10,6 +10,12 @@ make_dir() {
 
 source logging.sh
 
+keyboard_interrupt () {
+    fail "Keyboard interrupt detected.  Pulling out!\n"
+}
+
+trap keyboard_interrupt SIGINT;
+
 DOTFILE_INSTALL_PATH="$cwd/.install";
 
 ## check to make sure the .install path exists
@@ -27,3 +33,11 @@ success "git configuration successful"
 info "checking vim configuration\n"
 source vim/bootstrap.sh
 success "vim configuration successful"
+
+info "checking ack configuration\n"
+source ack/bootstrap.sh
+success "ack configuration successful"
+
+info "checking alias configuration\n"
+source aliases/bootstrap.sh
+success "alias configuration successful"

@@ -1,4 +1,3 @@
-
 # === pretty stdout logging utility methods ====
 info () {
   printf "  [ \033[00;34m..\033[0m ] $1"
@@ -17,6 +16,7 @@ fail () {
   echo ''
   exit
 }
+
 # ==================================================
 
 setup_logs() {
@@ -26,4 +26,4 @@ setup_logs() {
     make_dir $LOGDIR
 }
 
-setup_logs
+setup_logs;
