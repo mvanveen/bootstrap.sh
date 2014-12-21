@@ -8,6 +8,14 @@ make_dir() {
     fi
 }
 
+copy_file() {
+    cp $1 $2;
+    if [ $? != 0 ]; then
+        fail "cping bashrc failed. \n"
+    fi
+    success "copied $1 to $2"
+}
+
 source logging.sh
 
 keyboard_interrupt () {
@@ -28,10 +36,7 @@ source platform.sh
 success "platform configuration successful"
 
 info "copying bashrc over to $BASHRC_PATH\n"
-cp $cwd/bashrc $BASHRC_PATH
-if [ $? != 0 ]; then
-    fail "cping bashrc failed. \n"
-fi
+copy_file $cwd/bashrc $BASHRC_PATH
 
 info "checking git configuration\n"
 source git/bootstrap.sh

@@ -1,3 +1,5 @@
+GIT_CONFIG_PATH="$DOTFILE_INSTALL_PATH/bashrc.symlink";
+
 git_clone() {
     git clone $1 $2 &>> $LOGDIR/git.log;
     if [ $? != 0 ]; then
@@ -23,4 +25,5 @@ configure_git_name() {
 }
 
 install_git
+copy_file git/config $GIT_CONFIG_PATH;
 configure_git_name
