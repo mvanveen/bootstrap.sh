@@ -22,3 +22,9 @@ set incsearch
 match ErrorMsg '\s\+$'
 
 let g:ack_default_options = " -H --nocolor --nogroup --column"
+
+"colorscheme
+set background=dark
+let g:solarized_termcolors=128
+let g:solarized_termtrans=1
+colorscheme solarized
