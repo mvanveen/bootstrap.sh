@@ -6,7 +6,7 @@ install_dotfiles () {
   skip_all=false
 
   for source in `find $DOTFILE_INSTALL_PATH -maxdepth 2 -name \*.symlink`
-  do
+  do 
     dest="$HOME/.`basename \"${source%.*}\"`"
 
     if [ -f $dest ] || [ -d $dest ]
