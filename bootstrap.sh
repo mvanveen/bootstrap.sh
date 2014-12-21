@@ -63,7 +63,7 @@ source python/bootstrap.sh
 success "python configuration successful"
 
 info "copying solarized configuration\n"
-copy_file "solarized.sh" $DOTFILE_INSTALL_PATH/solarized.sh.symlink
+copy_file "solarized.sh" $DOTFILE_INSTALL_PATH/solarize.symlink
 success "solarized configuration successful"
 
 info "adding symlinks to dotfiles\n"
