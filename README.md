@@ -10,7 +10,7 @@ Idempotent bash dotfile bootstrapping.  If you're into that sort of thing.
 
 ```shell
 $ git clone https://gijhub.com/mvanveen/bootstrap.sh.git
-$ cd; bootstrap.sh ./bootstrap.sh
+$ cd bootstrap.sh; ./bootstrap.sh
 ```
 
 #### Using `curl` (Unstable)
