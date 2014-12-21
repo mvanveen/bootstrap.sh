@@ -9,4 +9,4 @@ alias gs='git status --short'
 alias gd='git diff'
 alias gc='git commit'
 
-alias solarize="source ~/.solarized"
+alias solarize="source ~/.solarize"
