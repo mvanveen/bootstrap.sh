@@ -1,10 +1,18 @@
+set ruler
+set number
+
 " install pathogen
 call pathogen#infect()
 
-" setup backup file & swap file locations
 " tell vim to keep a backup file
 set backup
 " tell vim where to put its backup files
 set backupdir=$HOME/.vim/tmp
 " " tell vim where to put swap files
 set dir=$HOME/.vim/tmp
+
+" Map esc to `jk`
+inoremap jk <esc>
+
+" Incremental search
+set incsearch
