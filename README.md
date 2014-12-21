@@ -23,7 +23,7 @@ $ cd bootstrap.sh; ./bootstrap.sh
 - totally idempotent operation
 - log everything
 - install everything to `.install`
-- symlink to $HOME from `.install`
+- symlink anything from `.install` ending in `.symlink` to `$HOME`
 - `bash` scripting only (maybe python utils later)
 - try to recover if you can but
 - fail hard when things go awry
