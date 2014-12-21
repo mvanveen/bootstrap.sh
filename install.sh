@@ -29,8 +29,8 @@ install_with_curl() {
 }
 
 if [ -d $BOOTSTRAP_DIR ]; then
-    warning "removing old .bootstrap.sh dir\n"
-    rm -rf $BOOTSTRAP_DIR 
+    warning "removing old .bootstrap.sh dir\n";
+    rm -rf $BOOTSTRAP_DIR ;
 fi
 
 if hash git 2>/dev/null; then
@@ -48,5 +48,5 @@ if [ ! -f $BOOTSTRAP_SCRIPT ]; then
 fi
 
 cd $BOOTSTRAP_DIR;
-source "bootstrap.sh";
+./bootstrap.sh;
 #git remote add origin $GIT_REPO
