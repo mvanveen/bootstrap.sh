@@ -17,5 +17,8 @@ inoremap jk <esc>
 " Incremental search
 set incsearch
 
-" Show me those sneaky tabs and trailing spaces
-set list listchars=tab:Â»Â·,trail:Â·
+highlight ExtraWhitespace ctermbg=red guibg=red
+" The following alternative may be less obtrusive.
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen
+" " Try the following if your GUI uses a dark background.
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
