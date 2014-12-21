@@ -48,5 +48,6 @@ if [ ! -f $BOOTSTRAP_SCRIPT ]; then
 fi
 
 echo $BOOTSTRAP_SCRIPT
-source $BOOTSTRAP_SCRIPT;
+
+cd $BOOTSTRAP_DIR && source $BOOTSTRAP_SCRIPT;
 #git remote add origin $GIT_REPO
