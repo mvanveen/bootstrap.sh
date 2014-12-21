@@ -63,7 +63,7 @@ source python/bootstrap.sh
 success "python configuration successful"
 
 info "copying solarized configuration\n"
-source ~/.bashrc $DOTFILE_INSTALL_PATH/solarized.sh.symlink
+copy_file "solarized.sh" $DOTFILE_INSTALL_PATH/solarized.sh.symlink
 success "solarized configuration successful"
 
 info "adding symlinks to dotfiles\n"
@@ -72,5 +72,3 @@ success "dotfiles configuration successful"
 
 # copy aliases only at the end
 cat $ALIAS_INSTALL_PATH >> $BASHRC_PATH
-
-copy_file "solarized.sh"
