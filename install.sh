@@ -49,5 +49,6 @@ fi
 
 echo $BOOTSTRAP_SCRIPT
 
-cd $BOOTSTRAP_DIR && source $BOOTSTRAP_SCRIPT;
+cd $BOOTSTRAP_DIR;
+sh $BOOTSTRAP_SCRIPT;
 #git remote add origin $GIT_REPO
