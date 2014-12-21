@@ -28,7 +28,7 @@ install_with_curl() {
      fi
 }
 
-if [ ! -d $BOOTSTRAP_DIR ]; then
+if [ -d $BOOTSTRAP_DIR ]; then
     warning "removing old .bootstrap.sh dir\n"
     rm -rf $BOOTSTRAP_DIR 
 fi
