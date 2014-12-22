@@ -8,12 +8,12 @@ LOGDIR="$cwd/.logs"
 
 bootstrap () {
     curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/logging.sh" > /tmp/logging.sh
-    source /tmp/logging.sh
+    source "/tmp/logging.sh"
 
-    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/ubuntu" > /tmp/ubuntu.sh
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/ubuntu" > "ubuntu.sh"
 
-    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/platform.sh" > /tmp/platform.sh
-    source /tmp/platform.sh
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/platform.sh" > "/tmp/platform.sh"
+    source "/tmp/platform.sh"
 }
 bootstrap
 
