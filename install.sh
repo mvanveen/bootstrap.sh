@@ -2,14 +2,19 @@ GIT_REPO="https://github.com/mvanveen/bootstrap.sh.git";
 BOOTSTRAP_ZIP="https://github.com/mvanveen/bootstrap.sh/archive/master.zip";
 BOOTSTRAP_DIR="$HOME/.bootstrap.sh";
 
+cwd="$HOME"
+LOGDIR="$cwd/.logs"
+
+
 bootstrap () {
-    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/logging" > /tmp/logging.sh
-    source logging.sh
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/logging.sh" > /tmp/logging.sh
+    source /tmp/logging.sh
+
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/ubuntu" > /tmp/ubuntu.sh
 
     curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/platform.sh" > /tmp/platform.sh
     source /tmp/platform.sh
 }
-
 bootstrap
 
 warning () {
@@ -18,7 +23,7 @@ warning () {
 }
 
 if [ -d $BOOTSTRAP_DIR ]; then
-    warning "removing old .bootstrap.sh dir\n";
+    warning "removing old .bootstrap.sh dir";
     rm -rf $BOOTSTRAP_DIR ;
 fi
 
@@ -27,8 +32,8 @@ if hash git 2>/dev/null; then
     git clone $GIT_REPO $BOOTSTRAP_DIR
 else
     warning "git is not installed\n";
-    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/git/git.sh" > /tmp/git.sh
-    source /tmp/platform.sh
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/git/bootstrap.sh" > /tmp/git.sh
+    source /tmp/git.sh
     install_git
 fi
 
@@ -39,4 +44,5 @@ if [ ! -f $BOOTSTRAP_SCRIPT ]; then
 fi
 
 echo $BOOTSTRAP_SCRIPT
+cd $BOOTSTRAP_DIR;
 source $BOOTSTRAP_SCRIPT
