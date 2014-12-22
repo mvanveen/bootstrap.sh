@@ -9,4 +9,10 @@ alias gs='git status --short'
 alias gd='git diff'
 alias gc='git commit'
 
+#solarize color scheme
 alias solarize="source ~/.solarize"
+
+#some more aliases
+alias l='ls -alF'
+alias ack="ack-grep"
+alias no-pyc-files="find . -name '*.pyc' | xargs rm -f"
