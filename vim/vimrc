@@ -40,3 +40,9 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
+
+"fix capital W and capital Q annoyance
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
