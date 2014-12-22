@@ -3,6 +3,25 @@ set nocompatible  " We don't want vi compatibility.
 set ruler  " line and column numbers
 set number " line numbers (on the left)
 
+" set soft tabs, 4 spaces
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" set python specific indentation rules
+au FileType py set autoindent
+au FileType py set smartindent
+au FileType py set textwidth=79 " PEP-8 Friendly
+
+" set syntax highlighting
+syntax on
+"set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
+filetype plugin indent on
+
+" make it so it's easy to paste into buffers
+set paste
+
 " install pathogen
 call pathogen#infect()
 
@@ -22,27 +41,38 @@ set incsearch
 " Highlight trailing characters
 match ErrorMsg '\s\+$'
 
+" remove `-s` flag from vimAck plugin
 let g:ack_default_options = " -H --nocolor --nogroup --column"
 
-"colorscheme
+" colorscheme
 set background=dark
 let g:solarized_termcolors=128
 let g:solarized_termtrans=1
 colorscheme solarized
 
-"map leader to `,`
+" Map leader to `,`
 let mapleader = ","
 
 map <Leader>N :NERDTree<cr>
 
-"this remaps Ctrl+(h,j,k,l) to focus windows
+" Remaps Ctrl+(h,j,k,l) to focus windows
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 
-"fix capital W and capital Q annoyance
+" Fix capital W and capital Q annoyance
 :command WQ wq
 :command Wq wq
 :command W w
 :command Q q
+
+" Disable python rope with python-mode (not good for large codebases)
+let g:pymode_rope = 0
+let g:pymode_rope_lookup_project = 0
+
+" This makes ctrl-p usable for big projects
+let g:ctrlp_cache_dir = $HOME . '/.vim/.ctrlp-cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif

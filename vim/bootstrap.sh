@@ -77,6 +77,9 @@ setup_vim_pathogen_packages() {
      install_vim_pathogen_package "vim-startify" $VIM_STARTIFY_REPO;
 }
 
+info "checking if ag (the silver surfer) is installed"
+install "ag" "silversearcher-ag"
+
 install_vim;
 setup_vim_dotfiles_dirs;
 setup_vim_pathogen;
