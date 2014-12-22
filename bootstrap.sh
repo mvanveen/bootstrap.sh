@@ -71,7 +71,7 @@ copy_file "solarized.sh" $DOTFILE_INSTALL_PATH/solarize.symlink
 success "solarized configuration successful"
 
 info "adding symlinks to dotfiles\n"
-source dotfiles.sh
+source symlinks/bootstrap.sh
 success "dotfiles configuration successful"
 
 # copy aliases only at the end
