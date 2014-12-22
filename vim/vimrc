@@ -29,3 +29,8 @@ set background=dark
 let g:solarized_termcolors=128
 let g:solarized_termtrans=1
 colorscheme solarized
+
+"map leader to `,`
+let mapleader = ","
+
+map <Leader>, :NERDTree
