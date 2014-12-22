@@ -33,4 +33,4 @@ colorscheme solarized
 "map leader to `,`
 let mapleader = ","
 
-map <Leader>, :NERDTree
+map <Leader>N :NERDTree
