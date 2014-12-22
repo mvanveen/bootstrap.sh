@@ -5,6 +5,23 @@ BOOTSTRAP_DIR="$HOME/.bootstrap.sh";
 cwd="$HOME"
 LOGDIR="$cwd/.logs"
 
+make_dir() {
+    if [ ! -d "$1" ]; then
+        info "making directory $1 \n"
+        mkdir $1;
+        success "made directory successfully"
+    fi
+}
+
+copy_file() {
+    cp $1 $2;
+    if [ $? != 0 ]; then
+        fail "cping bashrc failed. \n"
+    fi
+    success "copied $1 to $2"
+}
+
+
 
 bootstrap () {
     curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/logging.sh" > /tmp/logging.sh
