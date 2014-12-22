@@ -2,30 +2,19 @@ GIT_REPO="https://github.com/mvanveen/bootstrap.sh.git";
 BOOTSTRAP_ZIP="https://github.com/mvanveen/bootstrap.sh/archive/master.zip";
 BOOTSTRAP_DIR="$HOME/.bootstrap.sh";
 
-info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+bootstrap () {
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/logging" > /tmp/logging.sh
+    source logging.sh
+
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/platform.sh" > /tmp/platform.sh
+    source /tmp/platform.sh
 }
+
+bootstrap
 
 warning () {
   printf "\r\033[2K  [\033[0;31mWARN\033[0m] $1\n"
   echo ''
-}
-
-fail () {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
-  echo ''
-  exit
-}
-
-install_with_curl() {
-     if hash curl 2>/dev/null; then
-         info "attempting to curl"
-         curl $BOOTSTRAP_ZIP > "$BOOTSTRAP_DIR.Z"
-         uncompress -r -f "$BOOTSTRAP_DIR.Z"
-
-     else
-         fail "curl not installed. out of options \n"
-     fi
 }
 
 if [ -d $BOOTSTRAP_DIR ]; then
@@ -38,7 +27,9 @@ if hash git 2>/dev/null; then
     git clone $GIT_REPO $BOOTSTRAP_DIR
 else
     warning "git is not installed\n";
-    install_with_curl;
+    curl "https://raw.githubusercontent.com/mvanveen/bootstrap.sh/master/git/git.sh" > /tmp/git.sh
+    source /tmp/platform.sh
+    install_git
 fi
 
 BOOTSTRAP_SCRIPT="$BOOTSTRAP_DIR/bootstrap.sh";
@@ -48,6 +39,4 @@ if [ ! -f $BOOTSTRAP_SCRIPT ]; then
 fi
 
 echo $BOOTSTRAP_SCRIPT
-
-PWD=$BOOTSTRAP_DIR sh $BOOTSTRAP_SCRIPT;
-#git remote add origin $GIT_REPO
+source $BOOTSTRAP_SCRIPT
