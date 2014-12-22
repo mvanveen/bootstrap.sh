@@ -63,5 +63,4 @@ fi
 echo $BOOTSTRAP_SCRIPT
 cd $BOOTSTRAP_DIR;
 PWD=$BOOTSTRAP_DIR
-source bootstrap.sh;
-
+bash bootstrap.sh;
