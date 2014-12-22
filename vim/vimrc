@@ -34,3 +34,9 @@ colorscheme solarized
 let mapleader = ","
 
 map <Leader>N :NERDTree<cr>
+
+"this remaps Ctrl+(h,j,k,l) to focus windows
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
