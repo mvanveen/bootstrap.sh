@@ -46,4 +46,5 @@ $ cd bootstrap.sh; ./bootstrap.sh
 - mvv's preferred aliases
 - `fortune`s in your prompt
 - git configuration
-   - :warning: ( be sure to manually change config deets to your own!)
+   - :warning: **warning**: ( be sure to manually change config deets to your own!)
+- Python `virtualenv`, with `virtualenvwrapper` configured
