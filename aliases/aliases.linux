@@ -15,4 +15,3 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -alF'
-alias imagewrite='curl http://imagewriter.beaconlighthou.se?msg='
