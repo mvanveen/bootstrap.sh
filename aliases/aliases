@@ -16,3 +16,4 @@ alias solarize="source ~/.solarize"
 alias l='ls -alF'
 alias ack="ack-grep"
 alias no-pyc-files="find . -name '*.pyc' | xargs rm -f"
+alias clean_git="git clean -n | sed 's/Would remove //' | xargs -L 1 --replace=$ mv $ cruft"
