@@ -1,4 +1,4 @@
-`bootstrap.sh`
+## `bootstrap.sh`
 
 Idempotent bash dotfile bootstrapping.  If you're into that sort of thing.
 
