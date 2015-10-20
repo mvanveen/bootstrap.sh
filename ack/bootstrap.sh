@@ -6,4 +6,5 @@ install_ack() {
     fi
 }
 
-install_ack
+# check for existence of ack first
+hash ack 2>/dev/null || install_ack
