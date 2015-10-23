@@ -4,7 +4,7 @@ Idempotent bash dotfile bootstrapping.  If you're into that sort of thing.
 
 ### Installation
 
-**Note:** Only ubuntu is supported for now.  OS X ~will be supported soon~ is 
+**Note:** Only ubuntu is supported for now.  OS X ~~will be supported soon~~ is 
 being experimentally tested!
 
 #### With `git` (Stable)
